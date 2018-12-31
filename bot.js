@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "1";
+const prefix = "3";
 /////////////////////////
 ////////////////////////
 
@@ -313,31 +313,31 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '1help') {
+    if (message.content === '3help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription
-        .addField('1play', 'لتشغيل اغنية')
-        .addField('1join', 'دخول رومك الصوتي')
-        .addField('1disconnect', 'الخروج من رومك الصوتي')
-        .addField('1skip', 'تخطي الأغنية')
-        .addField('dz!pause', 'ايقاف الاغنية مؤقتا')
-        .addField('1resume', 'تكملة الاغنية')
-        .addField('1queue', 'اظهار قائمة التشغيل')
-        .addField('1np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+        .addField('3play', 'لتشغيل اغنية')
+        .addField('3join', 'دخول رومك الصوتي')
+        .addField('disconnect', 'الخروج من رومك الصوتي')
+        .addField('3skip', 'تخطي الأغنية')
+        .addField('3pause', 'ايقاف الاغنية مؤقتا')
+        .addField('3resume', 'تكملة الاغنية')
+        .addField('3queue', 'اظهار قائمة التشغيل')
+        .addField('3np', 'اظهار الاغنية اللي انت مشغلها حاليا')
 	.setFooter('============================================')
-        .addField('1ghelp', 'اظهاراوامر العامة')
+        .addField('3ghelp', 'اظهاراوامر العامة')
         .setFooter('♡♡♡♡■《《♧♧》》■♡♡♡♡')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    if (message.content === '1ghelp') {
+    if (message.content === '3ghelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
-        .addField('avatar', "افاتار الشخص المطلوب")
-        .addField('ping', 'معرفة ping البوت')
+        .addField('3avatar', "افاتار الشخص المطلوب")
+        .addField('3ping', 'معرفة ping البوت')
       message.channel.send(helpEmbed);
     }
 });
@@ -349,7 +349,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`1play | Wonder Server ,`,"https://www.twitch.tv/abdoufersaoui_Dz")
+client.user.setGame(`play | Wonder Server ,`,"https://www.twitch.tv/abdoufersaoui_Dz")
 client.user.setStatus("Dz")
 });
 
